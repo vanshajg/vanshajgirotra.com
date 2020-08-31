@@ -1,0 +1,15 @@
+language: node_js
+node_js: 
+  - 14.5.0
+cache: yarn
+install:
+  - npm ci
+script:
+  - yarn test
+  - yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on: 
+    branch: gh-pages
