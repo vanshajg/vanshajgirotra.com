@@ -3,7 +3,7 @@ node_js:
   - 14.5.0
 cache: yarn
 install:
-  - npm ci
+  - yarn install
 script:
   - yarn test
   - yarn build
@@ -11,5 +11,6 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
+  local-dir: public
   on: 
-    branch: gh-pages
+    branch: master
