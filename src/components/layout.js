@@ -10,14 +10,14 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "./styles/layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, route }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          header_text
         }
       }
     }
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header route={route} />
       <div
         style={{
           margin: `0 auto`,
@@ -46,6 +46,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  route: PropTypes.string
 }
 
 export default Layout

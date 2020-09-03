@@ -1,0 +1,47 @@
+.intro {
+  text-align: center;
+  @media screen and (min-width: 40em){
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    grid-gap: 1rem;
+  }
+  &__text {
+    grid-column: span 3;
+    grid-row-start: 1;
+    padding-top: 1.5em;
+  }
+  &__image {
+    width: 180px;
+    height: 220px;
+    margin: auto;
+    grid-column-start: 4;
+    transform: rotate(3deg);  
+    background: linear-gradient(120deg,#fff,#ddd 60%);
+    box-shadow: 0 0 22px -4px rgba(0,0,0,.6),inset 4px 5px 10px 0 rgba(0,0,0,.1);
+    padding: 1rem .5rem 0;
+    
+    .gatsby-image-wrapper {
+      max-height: 180px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+    ::before {
+      content: "";
+      position: absolute;
+      top: .5rem;
+      right: 50%;
+      transform: translateY(-50%);
+      height: .5rem;
+      width: .5rem;
+      background: black;
+      border-radius: 50%;
+      box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+    }
+  }
+}
+
