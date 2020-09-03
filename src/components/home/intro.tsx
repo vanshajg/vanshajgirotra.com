@@ -29,7 +29,7 @@ const Intro = (props: PageProps) => {
           <figcaption className="intro__image__text">This isn't me</figcaption>
         </div>
         <div className="intro__text">
-          <p>I'm a <b>software developer</b> working at <a href="https://practo.com" rel="no-opener no-referrer" target="_blank">Practo</a> from <b>Delhi, India.</b></p>
+          <p>I'm a <b>software developer</b> working at <a href="https://practo.com" rel="noreferrer noopener" target="_blank">Practo</a> from <b>Delhi, India.</b></p>
           <p>
             I work with React.js and javascript primarily, but you can find more about my toolbox <Link to="/page-2">here</Link>.</p>
         </div>
