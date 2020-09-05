@@ -18,13 +18,19 @@
     height: 220px;
     margin: auto;
     grid-column-start: 4;
-    transform: rotate(3deg);  
     background: linear-gradient(120deg,#fff,#ddd 60%);
     box-shadow: 0 0 22px -4px rgba(0,0,0,.6),inset 4px 5px 10px 0 rgba(0,0,0,.1);
     padding: 1rem .5rem 0;
-    
+    transform: rotate(3deg);
+    transform-origin: top;
+    transition: all 0.5s ease;
+
     .gatsby-image-wrapper {
       max-height: 180px;
+    }
+
+    &.clicked {
+      transform: rotate(-3deg);
     }
 
     &__text {

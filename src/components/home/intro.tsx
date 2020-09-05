@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { PageProps, Link, useStaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
 
 import "./styles/intro.scss";
 
 const Intro = (props: PageProps) => {
+
+  const [is_image_leaning_left, toggleImageLean] = useState(true);
 
   const data = useStaticQuery(graphql`
     query {
@@ -18,13 +20,18 @@ const Intro = (props: PageProps) => {
     }
   `)
 
+  const onPhotoClick = (): void => {
+    toggleImageLean(!is_image_leaning_left);
+  }
+
+  const image_class = `intro__image ${is_image_leaning_left ? '' : 'clicked'}`
   return (
     <>
       <h1>
         Hey, I'm Vanshaj Girotra
       </h1>
       <div className="intro grid">
-        <div className="intro__image" >
+        <div className={image_class} onClick={onPhotoClick} >
           <Img fluid={data.profilePicture.childImageSharp.fluid} imgStyle={{ objectFit: 'fill' }} />
           <figcaption className="intro__image__text">This isn't me</figcaption>
         </div>
