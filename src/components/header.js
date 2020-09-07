@@ -1,25 +1,34 @@
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import './styles/header.scss'
-
-const Header = ({ route }) => (
-  <header className="header">
-    <div>
+const Header = ({ route }) => {
+  const data = useStaticQuery(
+    graphql`
+    query{
+        
+        file(name: {eq:"header_icon"}) {
+          header_url :publicURL
+        } 
+      }
+    `
+  )
+  const { file: { header_url } } = data
+  return (
+    <header className="header">
       <h1 className="header__text">
-        {`${route}>`}
+        {`${route}`} <img src={header_url} />
       </h1>
-    </div>
-  </header>
-)
+    </header>
+  )
+}
 
 Header.propTypes = {
   route: PropTypes.string,
 }
 
 Header.defaultProps = {
-  route: ``,
+  route: '~',
 }
 
 export default Header

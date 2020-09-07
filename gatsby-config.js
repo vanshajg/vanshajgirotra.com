@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Vanshaj Girotra`,
     description: `Personal website of Vanshaj Girotra`,
-    author: `vanshaj girotra`,
+    author: `Vanshaj Girotra`,
     header_text: '>~'
   },
   plugins: [
@@ -15,15 +15,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        plugins: [
-          `gatsby-transformer-json`
-        ]
-      }
+        path: `./src/data/`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -36,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/header_icon.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet"></link>
+    </Helmet>
   )
 }
 
