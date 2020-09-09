@@ -1,5 +1,5 @@
 import React from "react"
-import { PageProps, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const getFormattedImages = (images, images_meta) => {
   const formatted_image_obj = {}
@@ -65,7 +65,7 @@ const Footer = (props) => {
       {
         formatted_images.map((image) => (
           <a href={image.url} target="_blank" rel="nofollow noopener" key={image.id}>
-            <img key={image.id} src={image.src} alt={image.name} />
+            <img key={image.id} src={image.src} alt={image.name} className="footer__image" />
           </a>
         ))
       }

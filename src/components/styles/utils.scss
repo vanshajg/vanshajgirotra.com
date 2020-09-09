@@ -3,3 +3,12 @@
     text-align: center;
   }
 }
+
+.u-t {
+  &--bold {
+    font-weight: bold;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+}
