@@ -64,7 +64,7 @@ const Footer = (props) => {
     <footer className="footer">
       {
         formatted_images.map((image) => (
-          <a href={image.url} target="_blank" rel="nofollow noopener" key={image.id}>
+          <a href={image.url} target="_blank" rel="nofollow noopener noreferrer" key={image.id}>
             <img key={image.id} src={image.src} alt={image.name} className="footer__image" />
           </a>
         ))

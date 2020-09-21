@@ -25,7 +25,7 @@ const ProfileImage = (props: PageProps) => {
 
   return (
     <div className={image_class} onClick={onPhotoClick} >
-      <Img fluid={data.profilePicture.childImageSharp.fluid} imgStyle={{ objectFit: 'fill' }} />
+      <Img fluid={data.profilePicture.childImageSharp.fluid} imgStyle={{ objectFit: 'fill' }} alt={"Vanshaj Girotra's Image"} />
       <figcaption className="intro__image__text">This is me</figcaption>
     </div>
   );

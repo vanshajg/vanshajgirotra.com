@@ -26,7 +26,7 @@ const Skills = () => {
   `);
 
   const skill_img_obj = {}
-  data.allFile.edges.map(img_node => {
+  data.allFile.edges.forEach(img_node => {
     skill_img_obj[img_node.node.name] = img_node.node.publicURL
   });
 
@@ -49,7 +49,7 @@ const Skills = () => {
       <div className="interest__carousel">
         {
           skill_order.map((skill, idx) => <div key={idx} className="text-align--center">
-            <img src={skill.url} className="interest__carousel__img" /><p className="u-t--capitalize">{skill.name}</p>
+            <img src={skill.url} className="interest__carousel__img" alt={skill.name} /><p className="u-t--capitalize">{skill.name}</p>
           </div>
           )
         }

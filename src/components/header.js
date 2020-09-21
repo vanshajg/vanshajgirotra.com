@@ -17,7 +17,7 @@ const Header = ({ route }) => {
   return (
     <header className="header">
       <h1 className="header__text">
-        {`${route}`} <img src={header_url} />
+        {`${route}`} <img src={header_url} alt={"symbol"} />
       </h1>
     </header>
   )
