@@ -15,7 +15,7 @@ const IndexPage = () => (
     {/* <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
     <Helmet>
-      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="stylesheet"></link>
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" ></link>
     </Helmet>
   </Layout>
 )
