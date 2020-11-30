@@ -1,28 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 
-import "../styles/intro.scss";
-import ProfileImage from "./profile_image";
-
-const Intro = (props) => {
-
-
+const Intro = () => {
+  // const []
   return (
-    <>
-      <h1>
-        Hey, I'm Vanshaj Girotra
+    <section className="min-h-screen pt-16 px-5 md:pt-40 md:px-32 font-bold">
+      <p className="text-gray-500">
+        Hi, I am
+      </p>
+      <h1 className="text-3xl md:text-4xl">
+        Vanshaj Girotra
       </h1>
-      <div className="intro grid">
-        <ProfileImage />
-        <div className="intro__text">
-          <p>I'm a <b>software developer</b> working at <a href="https://practo.com" rel="noreferrer noopener" target="_blank">Practo</a> from <b>Delhi, India.</b></p>
-
-          <p> 
-            I like to optimise things, maybe even more than building things. Besides coding, I like to watch football and play guitar. 
-          
-          </p>
-        </div>
-      </div>
-    </>
+      <h1 className="text-3xl md:text-4xl text-gray-500 pt-2">
+        and I build things for the web
+      </h1>
+      <p className="text-gray-500 pt-4">
+        I'm a software engineer based in New Delhi with more than a year of experience of building websites.
+      </p>
+    </section>
   );
 }
 

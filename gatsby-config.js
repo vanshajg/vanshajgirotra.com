@@ -14,7 +14,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,7 +23,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-preact`,
+    `gatsby-plugin-postcss`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
