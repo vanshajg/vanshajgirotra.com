@@ -15,9 +15,9 @@ const getContact = ({ icon: Icon, name, url }, index) => {
 const Contacts = () => {
   const [is_loaded, setLoaded] = useState(false)
   useEffect(() => {
-    window.addEventListener('load', () => {
+    setTimeout(() => {
       setLoaded(true)
-    })
+    }, 1000)
   }, [])
 
 
