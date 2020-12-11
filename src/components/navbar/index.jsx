@@ -4,6 +4,7 @@ import { ThemeContext } from '../../context/themeContext'
 import { LanguageContext } from '../../context/languageContext'
 import { FaSun, FaRegMoon } from 'react-icons/fa'
 import { themes } from '../../contants/theme'
+import ScrollHelper from './scrollHelper'
 
 
 const Navbar = () => {
@@ -19,9 +20,10 @@ const Navbar = () => {
 
       </span>
     </div>
-    <div className="">
-      <span onClick={toggleTheme}>{theme === themes.dark ? <FaRegMoon className="text-2xl text-gray-500" /> : <FaSun className="text-2xl text-gray-500" />}</span>
+    <div className="hover:text-primary-500">
+      <span onClick={toggleTheme}>{theme === themes.dark ? <FaRegMoon className="text-2xl md:text-3xl text-gray-500" /> : <FaSun className="text-2xl md:text-3xl text-gray-500" />}</span>
     </div>
+    {/* <ScrollHelper /> */}
   </div>
 }
 
