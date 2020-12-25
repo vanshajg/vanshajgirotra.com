@@ -19,12 +19,14 @@ class ThemeProvider extends React.Component {
       localStorage.setItem('theme', theme)
       this.setState({ theme })
     }
-    const theme = localStorage.getItem('theme') || (prefersDarkMode() ? themes.dark : themes.light)
     this.state = {
-      theme,
       toggleTheme: this.toggleTheme
     }
 
+  }
+  componentDidMount() {
+    const theme = localStorage.getItem('theme') || (prefersDarkMode() ? themes.dark : themes.light)
+    this.setState({ theme })
   }
   render() {
     return (
