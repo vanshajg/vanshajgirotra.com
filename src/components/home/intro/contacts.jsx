@@ -25,7 +25,7 @@ const Contacts = () => {
     return null
 
   return (
-    <div className="flex mt-10 md:justify-start justify-center">
+    <div className="flex mt-10 md:justify-start justify-center h-10">
       {data.map((contact, index) => getContact(contact, index))}
     </div>
   )

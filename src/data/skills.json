@@ -1,29 +1,22 @@
 [
   {
-    "name": "c++"
+    "name": "Frontend Development",
+    "Description": "javascript, typescript, React.js, redux, fluxible",
+    "icon": "reactjs"
   },
   {
-    "name": "javascript"
+    "name": "Backend Development",
+    "Description": "typescript, javascript, node.js, Postgresql",
+    "icon": "reactjs"
   },
   {
-    "name": "reactjs"
+    "name": "Frontend Development",
+    "Description": "React.js, redux, fluxible",
+    "icon": "reactjs"
   },
   {
-    "name": "redux"
-  },
-  {
-    "name": "typescript"
-  },
-  {
-    "name": "css"
-  },
-  {
-    "name": "nodejs"
-  },
-  {
-    "name": "docker"
-  },
-  {
-    "name": "graphql"
+    "name": "Frontend Development",
+    "Description": "React.js, redux, fluxible",
+    "icon": "reactjs"
   }
 ]

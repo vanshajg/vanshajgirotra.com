@@ -18,7 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        path: `./blog-content/`,
+        name: 'blog-content'
       },
     },
     {
@@ -48,10 +49,10 @@ module.exports = {
         },
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

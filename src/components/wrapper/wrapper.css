@@ -9,3 +9,13 @@
   background-color: #ffffff;
   @apply transition-all duration-200 ease-in-out;
 }
+
+.dark-background {
+  background-color: #121212;
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.light-background {
+  background-color: #ffffff;
+  @apply transition-all duration-200 ease-in-out;
+}

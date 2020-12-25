@@ -9,9 +9,8 @@ const ScrollHelper = () => {
     } else {
       setScrollClassname('animate-rotator_second')
     }
-    console.log({ scroll_classname })
   }
-  return <div onClick={onScrollClick} className={`text-2xl fixed bottom-5 right-5 ${scroll_classname}`}> <FaArrowDown /></div>
+  return <div onClick={onScrollClick} className={`text-2xl fixed bottom-5 right-5 text-gray-500 z-10 ${scroll_classname}`}> <FaArrowDown /></div>
 }
 
 export default ScrollHelper

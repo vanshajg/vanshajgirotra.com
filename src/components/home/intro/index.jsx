@@ -2,9 +2,8 @@ import React from "react"
 import Contacts from "./contacts"
 
 const Intro = () => {
-  // const []
   return (
-    <section className="min-h-screen pt-16 px-5 md:pt-40 md:px-32 font-bold relative">
+    <section className="min-h-screen pt-32 px-5 md:pt-48 md:px-32 font-bold relative">
       <p className="text-gray-500">
         Hi, I am
       </p>
@@ -15,7 +14,8 @@ const Intro = () => {
         and I build things for the web
       </h1>
       <p className="text-gray-500 pt-4">
-        I'm a software engineer based in New Delhi with more than a year of experience of building websites.
+        I'm a software engineer based in New Delhi specialising in building exeptional websites, applications and everything
+        in between
       </p>
       <Contacts />
     </section>

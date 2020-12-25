@@ -1,19 +1,24 @@
-import { FaLinkedin, FaStackOverflow, FaGithub } from 'react-icons/fa'
+import { SiGithub, SiLinkedin, SiStackoverflow, SiMailDotRu } from 'react-icons/si'
 
 export default [
   {
     name: 'Linkedin',
-    icon: FaLinkedin,
+    icon: SiLinkedin,
     url: 'https://linkedin.com/in/arcade0'
   },
   {
     name: 'Stackoverflow',
-    icon: FaStackOverflow,
+    icon: SiStackoverflow,
     url: 'https://stackoverflow.com/users/5830776/',
   },
   {
     name: 'Github',
-    icon: FaGithub,
+    icon: SiGithub,
     url: 'https://github.com/vanshajg'
   },
+  {
+    name: 'E-mail',
+    icon: SiMailDotRu,
+    url: 'mailto:vanshajgirotra@gmail.com'
+  }
 ]
