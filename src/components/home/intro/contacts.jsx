@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const getContact = ({ icon: Icon, name, url }, index) => {
   return (
-    <OutboundLink href={url} rel="noopener noreferrer" className="mr-4 text-3xl animate-fade_in" key={index}
+    <OutboundLink href={url} rel="noopener noreferrer" target="_blank" className="mr-4 text-3xl animate-fade_in" key={index}
       // check why opacity: 0 had to be given
       style={{ animationDelay: `${index * 0.25 + 0.25}s`, animationDuration: '1s', opacity: 0 }}>
       <Icon />
