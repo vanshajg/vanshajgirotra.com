@@ -1,8 +1,9 @@
 ---
-title: "My development enviroment"
+title: "My development enviroment (WIP)"
 description: "The tools / libraries that I use for my work and personal projects"
 slug: "development-enviroment"
 tags: ["productivity", "development", "enviroment"]
+date: "1"
 ---
 
 

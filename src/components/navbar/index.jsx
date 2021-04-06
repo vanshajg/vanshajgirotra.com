@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`flex px-5 justify-between py-5 fixed w-full z-10 border-gray-500 border-b ${nav_background}`}>
+      <div className={`flex px-5 justify-between py-2 fixed w-full z-10 border-gray-200 border-b ${nav_background}`}>
         <div>
           <span>
             <Link to="/"><FaTerminal className="text-2xl text-gray-500" /></Link>

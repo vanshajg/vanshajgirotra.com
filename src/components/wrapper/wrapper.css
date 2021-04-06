@@ -1,21 +1,21 @@
 .dark {
   color: #dddddd;
-  background-color: #121212;
+  background-color: #344648;
   @apply transition-all duration-200 ease-in-out;
 }
 
 .light {
   color: #222222;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   @apply transition-all duration-200 ease-in-out;
 }
 
 .dark-background {
-  background-color: #121212;
+  background-color: #344648;
   @apply transition-all duration-200 ease-in-out;
 }
 
 .light-background {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   @apply transition-all duration-200 ease-in-out;
 }

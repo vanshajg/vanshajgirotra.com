@@ -26,6 +26,11 @@ class ThemeProvider extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const theme = localStorage.getItem('theme') || (prefersDarkMode() ? themes.dark : themes.light)
+    this.setState({ theme })
+  }
+
   render() {
     return (
       <ThemeContext.Provider value={this.state}>

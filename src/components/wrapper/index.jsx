@@ -3,15 +3,18 @@ import Seo from '../seo';
 import { ThemeContext } from '../../context/themeContext'
 import styles from './wrapper.css'
 import { themes } from '../../contants/theme';
+import { Navbar } from '../navbar'
+import { Footer } from '../footer'
 
 const Wrapper = ({ children }) => {
   const { theme } = useContext(ThemeContext)
   return (
-    <div className={theme === themes.dark ? 'dark' : 'light'} >
-      {/* <Seo /> */}
-      <div className="">
+    <div className={theme === themes.dark ? 'dark' : 'light'}>
+      <Navbar />
+      <div className="min-h-screen px-5 md:px-32">
         {children}
       </div>
+      <Footer />
     </div >
   );
 }

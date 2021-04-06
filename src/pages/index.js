@@ -9,14 +9,39 @@ import { Skills } from '../components/home/skills'
 import Wrapper from '../components/wrapper'
 // import Skills from '../components/home/skills'
 // import { Helmet } from 'react-helmet'
+import { Postpreview } from '../components/postpreview'
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(limit: 5) {
+        edges {
+          node {
+            frontmatter {
+              slug
+              tags
+              description
+              title
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `);
   return (
     <Wrapper>
-      <Navbar />
       <Intro />
       {/* <About /> */}
       {/* <Skills /> */}
+      <div className="mt-12">
+        {data.allMarkdownRemark.edges.map(({ node }, id) => <Postpreview node={node} key={id} />)}
+      </div>
+      <div className="mt-8">
+        <Link to="/posts" className="underline text-indigo-500">All posts</Link>
+      </div>
     </Wrapper>
   )
 }
