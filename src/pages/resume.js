@@ -1,6 +1,4 @@
-
 import React from "react"
-import { Link } from "gatsby"
 import Wrapper from '../components/wrapper'
 
 const Resume = () => (

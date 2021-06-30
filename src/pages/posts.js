@@ -15,6 +15,7 @@ const Posts = () => {
               tags
               description
               title
+              private
             }
             timeToRead
           }
@@ -26,7 +27,7 @@ const Posts = () => {
     <Wrapper>
       <h1 className="pt-24 text-2xl underline">Posts</h1>
       <div className="mt-12">
-        {data.allMarkdownRemark.edges.map(({ node }, id) => <Postpreview node={node} key={id} />)}
+        {data.allMarkdownRemark.edges.filter(edge => !edge.node.frontmatter.private).map(({ node }, id) => <Postpreview node={node} key={id} />)}
       </div>
     </Wrapper>
   )

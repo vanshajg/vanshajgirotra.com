@@ -4,6 +4,7 @@ description: "The tools / libraries that I use for my work and personal projects
 slug: "development-enviroment"
 tags: ["productivity", "development", "enviroment"]
 date: "1"
+private: true
 ---
 
 

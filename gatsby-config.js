@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Vanshaj Girotra`,
@@ -21,6 +25,13 @@ module.exports = {
         path: `./blog-content/`,
         name: 'blog-content'
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: 'data'
+      }
     },
     {
       resolve: `gatsby-plugin-google-gtag`,

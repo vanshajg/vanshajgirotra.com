@@ -24,6 +24,7 @@ const IndexPage = () => {
               tags
               description
               title
+              private
             }
             timeToRead
           }
@@ -37,10 +38,10 @@ const IndexPage = () => {
       {/* <About /> */}
       {/* <Skills /> */}
       <div className="mt-12">
-        {data.allMarkdownRemark.edges.map(({ node }, id) => <Postpreview node={node} key={id} />)}
+        {data.allMarkdownRemark.edges.filter(edge => !edge.node.frontmatter.private).map(({ node }, id) => <Postpreview node={node} key={id} />)}
       </div>
       <div className="mt-8">
-        <Link to="/posts" className="underline text-indigo-500">All posts</Link>
+        {/* <Link to="/posts" className="underline text-indigo-500">All posts</Link> */}
       </div>
     </Wrapper>
   )

@@ -3,6 +3,7 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const redirectTemplate = path.resolve("src/templates/redirect.js")
   // Query for markdown nodes to use in creating pages.
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
@@ -16,8 +17,17 @@ exports.createPages = ({ graphql, actions }) => {
               slug
               title
               description
+              private
             }
             html
+          }
+        }
+      }
+      allSocialJson {
+        edges {
+          node {
+            name
+            url
           }
         }
       }
@@ -28,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog post pages.
-    result.data.allMarkdownRemark.edges.forEach(edge => {
+    result.data.allMarkdownRemark.edges.filter(edge => !edge.node.frontmatter.private).forEach(edge => {
       createPage({
         // Path for this page — required
         path: `post/${edge.node.frontmatter.slug}`,
@@ -38,6 +48,16 @@ exports.createPages = ({ graphql, actions }) => {
           title: edge.node.frontmatter.title,
           description: edge.node.frontmatter.description
         },
+      })
+    })
+    result.data.allSocialJson.edges.forEach(edge => {
+      createPage({
+        path: `redirect/${edge.node.name}`,
+        component: redirectTemplate,
+        context: {
+          name: edge.node.name,
+          url: edge.node.url
+        }
       })
     })
   })
