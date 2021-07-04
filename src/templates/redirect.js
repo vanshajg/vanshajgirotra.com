@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 
 const Redirect = ({ pathContext: { name, url } }) => {
   useEffect(() => {
-    if (process.env.NODE_ENV === "production")
+    if (process.env.NODE_ENV === "production" && window.gtag)
       window.gtag("event", "redirect", { name, url });
-    //window.location = url;
+    window.location = url;
 
   })
   return (
