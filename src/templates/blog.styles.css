@@ -1,8 +1,13 @@
-/* h1 {
-  @apply text-2xl;
+.blog-wrapper h1 {
+  @apply text-3xl;
   @apply mt-4;
   @apply mb-2;
 }
-a {
+.blog-wrapper h2 {
+  @apply text-2xl;
+  @apply mt-2;
+  @apply mb-1;
+}
+.blog-wrapper a {
   @apply text-blue-600
-} */
+}
