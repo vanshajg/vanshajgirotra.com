@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import contacts from './contacts_data'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { ThemeContext } from '../../context/themeContext'
+import { themes } from '../../contants/theme'
 
 const getContact = ({ icon: Icon, name, url }, index) => {
   return (
@@ -11,8 +13,11 @@ const getContact = ({ icon: Icon, name, url }, index) => {
 }
 
 export const Footer = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext)
+  const is_dark = theme === themes.dark;
+  const footer_background = is_dark ? 'dark-background' : 'light-background'
   return (
-    <div className="flex left-0 w-screen justify-center border-gray-200 border-t">
+    <div className={`flex left-0 w-screen justify-center border-gray-200 border-t fixed bottom-0 ${footer_background}`}>
       {contacts.map((contact, index) => getContact(contact, index))}
     </div>
   )

@@ -11,7 +11,7 @@ const Wrapper = ({ children }) => {
   return (
     <div className={theme === themes.dark ? 'dark' : 'light'}>
       <Navbar />
-      <div className=" px-5 md:px-32">
+      <div className=" px-5 md:px-32 min-h-screen">
         {children}
       </div>
       <Footer />
