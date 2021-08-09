@@ -1,13 +1,32 @@
 .blog-wrapper h1 {
-  @apply text-3xl;
+  @apply text-4xl;
   @apply mt-4;
   @apply mb-2;
 }
 .blog-wrapper h2 {
+  @apply text-3xl;
+  @apply mt-2;
+  @apply mb-1;
+}
+
+.blog-wrapper h3 {
   @apply text-2xl;
   @apply mt-2;
   @apply mb-1;
 }
+ 
+.dark pre {
+  color: black;
+}
+
+.blog-wrapper pre {
+  background-color: #C8C8C8;
+  @apply px-4;
+  overflow: scroll;
+  border-radius: 2%;
+}
+
+
 .blog-wrapper a {
   @apply text-blue-600
 }

@@ -12,7 +12,7 @@ const getContact = ({ icon: Icon, name, url }, index) => {
 
 export const Footer = () => {
   return (
-    <div className="flex absolute bottom-2 left-0 w-screen justify-center border-gray-200 border-t">
+    <div className="flex left-0 w-screen justify-center border-gray-200 border-t">
       {contacts.map((contact, index) => getContact(contact, index))}
     </div>
   )
