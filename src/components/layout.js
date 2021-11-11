@@ -28,7 +28,7 @@ const Layout = ({ children, route }) => {
 
   return (
     <>
-      <Header route={route} />
+      {/* <Header route={route} /> */}
       <div
         style={{
           margin: `0 auto`,
@@ -44,7 +44,7 @@ const Layout = ({ children, route }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  route: PropTypes.string
+  route: PropTypes.string,
 }
 
 export default Layout
