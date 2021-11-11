@@ -1,47 +1,35 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 // import Layout from "../components/layout"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 import Intro from "../components/home/intro"
 // import About from '../components/home/about'
 import { Navbar } from "../components/navbar"
-import { Skills } from '../components/home/skills'
-import Wrapper from '../components/wrapper'
-// import Skills from '../components/home/skills'
+import Wrapper from "../components/wrapper"
 // import { Helmet } from 'react-helmet'
-import { Postpreview } from '../components/postpreview'
+import { Postpreview } from "../components/postpreview"
 import { graphql, Link, useStaticQuery } from "gatsby"
+import contacts_data from "../components/home/intro/contacts_data"
 
 const IndexPage = () => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(limit: 5) {
-        edges {
-          node {
-            frontmatter {
-              slug
-              tags
-              description
-              title
-              private
-            }
-            timeToRead
-          }
-        }
-      }
-    }
-  `);
   return (
     <Wrapper>
       <Intro />
-      {/* <About /> */}
-      {/* <Skills /> */}
-      <div className="mt-12">
-        {data.allMarkdownRemark.edges.filter(edge => !edge.node.frontmatter.private).map(({ node }, id) => <Postpreview node={node} key={id} />)}
-      </div>
-      <div className="mt-8">
-        {/* <Link to="/posts" className="underline text-indigo-500">All posts</Link> */}
+      {/* <SEO /> */}
+      <div className="md:text-4xl text-center flex justify-center items-center pt-4">
+        Find me on: &nbsp;
+        {contacts_data.map(({ icon: Icon, index, url }) => (
+          <OutboundLink
+            href={url}
+            rel="noopener noreferrer"
+            target="_blank"
+            key={index}
+            className="md:pl-4 pl-2"
+          >
+            <Icon />
+          </OutboundLink>
+        ))}
       </div>
     </Wrapper>
   )

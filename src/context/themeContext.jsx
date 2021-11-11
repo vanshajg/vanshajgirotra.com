@@ -1,13 +1,12 @@
-import React from 'react'
-import { themes } from '../contants/theme'
-
+import React from "react"
+import { themes } from "../contants/theme"
 
 const prefersDarkMode = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches === true;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches === true
 }
 const ThemeContext = React.createContext({
-  theme: themes.light,
-  toggleTheme: () => { }
+  theme: themes.dark,
+  toggleTheme: () => {},
 })
 
 class ThemeProvider extends React.Component {
@@ -15,19 +14,24 @@ class ThemeProvider extends React.Component {
     super(props)
 
     this.toggleTheme = () => {
-      const theme = this.state.theme === themes.dark ? themes.light : themes.dark
-      localStorage.setItem('theme', theme)
+      const theme =
+        this.state.theme === themes.dark ? themes.light : themes.dark
+      localStorage.setItem("theme", theme)
       this.setState({ theme })
     }
-    const theme = localStorage.getItem('theme') || (prefersDarkMode() ? themes.dark : themes.light)
+    const theme =
+      localStorage.getItem("theme") ||
+      (prefersDarkMode() ? themes.dark : themes.light)
     this.state = {
       toggleTheme: this.toggleTheme,
-      theme
+      theme,
     }
   }
 
   componentDidMount() {
-    const theme = localStorage.getItem('theme') || (prefersDarkMode() ? themes.dark : themes.light)
+    const theme =
+      localStorage.getItem("theme") ||
+      (prefersDarkMode() ? themes.dark : themes.light)
     this.setState({ theme })
   }
 
