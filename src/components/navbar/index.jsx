@@ -1,14 +1,14 @@
-import React, { useContext } from "react"
-import { Link } from "gatsby"
+import React, { useContext } from 'react'
+import { Link } from 'gatsby'
 
-import { ThemeContext } from "../../context/themeContext"
-import { FaSun, FaRegMoon, FaTerminal } from "react-icons/fa"
-import { themes } from "../../contants/theme"
+import { ThemeContext } from '../../context/themeContext'
+import { FaSun, FaRegMoon, FaTerminal } from 'react-icons/fa'
+import { themes } from '../../contants/theme'
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext)
   const is_dark = theme === themes.dark
-  const nav_background = is_dark ? "dark-background" : "light-background"
+  const nav_background = is_dark ? 'dark-background' : 'light-background'
 
   return (
     <>

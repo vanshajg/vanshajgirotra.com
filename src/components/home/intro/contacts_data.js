@@ -3,27 +3,27 @@ import {
   SiLinkedin,
   SiStackoverflow,
   SiMaildotru,
-} from "react-icons/si"
+} from 'react-icons/si'
 
 export default [
   {
-    name: "Linkedin",
+    name: 'Linkedin',
     icon: SiLinkedin,
-    url: "https://linkedin.com/in/vanshajgirotra",
+    url: 'https://linkedin.com/in/vanshajgirotra',
   },
   {
-    name: "Stackoverflow",
+    name: 'Stackoverflow',
     icon: SiStackoverflow,
-    url: "https://stackoverflow.com/users/5830776/",
+    url: 'https://stackoverflow.com/users/5830776/',
   },
   {
-    name: "Github",
+    name: 'Github',
     icon: SiGithub,
-    url: "https://github.com/vanshajg",
+    url: 'https://github.com/vanshajg',
   },
   {
-    name: "E-mail",
+    name: 'E-mail',
     icon: SiMaildotru,
-    url: "mailto:vanshajgirotra@gmail.com",
+    url: 'mailto:vanshajgirotra@gmail.com',
   },
 ]

@@ -1,27 +1,25 @@
 import React from 'react'
 import { languages } from '../contants/languages'
 
-
 const LanguageContext = React.createContext({
   language: languages.en,
-  changeLanguage: () => { }
+  changeLanguage: () => {},
 })
 
 class LanguageProvider extends React.Component {
   constructor(props) {
     super(props)
 
-    this.changeLanguage = (language) => {
+    this.changeLanguage = language => {
       this.setState(() => ({
-        language
+        language,
       }))
     }
 
     this.state = {
       language: languages.en,
-      changeLanguage: this.changeLanguage
+      changeLanguage: this.changeLanguage,
     }
-
   }
   render() {
     return (

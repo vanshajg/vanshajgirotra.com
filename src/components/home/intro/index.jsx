@@ -1,5 +1,5 @@
-import React from "react"
-import Contacts from "./contacts"
+import React from 'react'
+import Contacts from './contacts'
 
 const Intro = () => {
   return (

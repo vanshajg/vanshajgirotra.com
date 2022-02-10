@@ -1,7 +1,6 @@
 const themes = {
-  'dark': 'dark',
-  'light': 'light'
+  dark: 'dark',
+  light: 'light',
 }
-
 
 export { themes }

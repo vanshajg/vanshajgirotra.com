@@ -2,8 +2,10 @@ import React from 'react'
 import Wrapper from '../components/wrapper'
 import './blog.styles.css'
 
-const BlogPost = (props) => {
-  const { pageContext: { html, title, description } } = props;
+const BlogPost = props => {
+  const {
+    pageContext: { html, title, description },
+  } = props
 
   return (
     <Wrapper>
@@ -14,7 +16,6 @@ const BlogPost = (props) => {
       </div>
     </Wrapper>
   )
-
 }
 
 export default BlogPost

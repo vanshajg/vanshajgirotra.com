@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -7,7 +7,7 @@ module.exports = {
     title: `Vanshaj Girotra`,
     description: `Personal website of Vanshaj Girotra`,
     author: `Vanshaj Girotra`,
-    header_text: ">~",
+    header_text: '>~',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./blog-content/`,
-        name: "blog-content",
+        name: 'blog-content',
       },
     },
     {
@@ -24,7 +24,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID || "", // Google Analytics / GA
+          process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID || '', // Google Analytics / GA
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
@@ -42,7 +42,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
     },
