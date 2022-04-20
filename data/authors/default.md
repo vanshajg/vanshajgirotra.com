@@ -6,8 +6,7 @@ occupation: Software Engineer
 company: Godaddy
 resume: http://resume.vanshajgirotra.com
 email: contact@vanshajgirotra.com
-twitter: https://twitter.com/vanshajgirotra
+twitter: https://twitter.com/VanshajGirotra
 linkedin: https://www.linkedin.com/in/vanshajgirotra
 github: https://github.com/vanshajg
 ---
-
