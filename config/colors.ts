@@ -14,7 +14,6 @@ export const Colors: Record<string, string> = {
   node: '#68A063',
   springboot: '#56A036',
 
-
   // Cloud
   aws: '#FF9900',
   gcp: '#4285F4',
@@ -22,14 +21,13 @@ export const Colors: Record<string, string> = {
   kubernetes: '#326CE5',
   helm: '#092E20',
 
-
   // Social
   linkedin: '#0077B5',
   twitter: '#1DA1F2',
   youtube: '#FF0000',
   email: '#D44638',
+  stackoverflow: '#F2740D',
   buymeacoffee: '#FFDD00',
 
   // Misc.
-
 };

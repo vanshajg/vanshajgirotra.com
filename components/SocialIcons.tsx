@@ -10,6 +10,7 @@ import {
 } from 'react-icons/io';
 import {
   SiGmail as MailIcon,
+  SiStackoverflow as StackoverflowIcon,
 } from 'react-icons/si';
 import { Maybe, Tuple } from 'types';
 
@@ -50,9 +51,12 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
       icon = <GithubIcon {...props} />;
       break;
 
-
     case ContactType.email:
       icon = <MailIcon {...props} />;
+      break;
+
+    case ContactType.stackoverflow:
+      icon = <StackoverflowIcon {...props} />;
       break;
 
     default:

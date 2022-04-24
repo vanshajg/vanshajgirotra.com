@@ -2,7 +2,8 @@ export enum ContactType {
   github = 'github',
   linkedin = 'linkedin',
   twitter = 'twitter',
-  email = 'email'
+  email = 'email',
+  stackoverflow = 'stackoverflow',
 }
 
 export interface Contact {
@@ -20,5 +21,6 @@ export const contact: Contact = {
     linkedin: 'https://linkedin.com/in/vanshajgirotra',
     twitter: 'https://twitter.com/vanshajgirotra',
     email: 'mailto:contact@vanshajgirotra.com',
+    stackoverflow: 'https://stackoverflow.com/users/5830776/',
   },
 };
