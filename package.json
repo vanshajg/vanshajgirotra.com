@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.5.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
