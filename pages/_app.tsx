@@ -10,12 +10,13 @@ import '@fontsource/open-sans/500.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
 import '@fontsource/open-sans/800.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import Analytics from '@/components/analytics';
+// import Analytics from '@/components/analytics';
 import { ClientReload } from '@/components/ClientReload';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import siteMetadata from '@/data/siteMetadata';

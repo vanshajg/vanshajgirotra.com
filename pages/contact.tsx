@@ -6,6 +6,7 @@ import { contact } from 'config/contact';
 import { openPopupWidget } from 'react-calendly';
 import { RoughNotation } from 'react-rough-notation';
 
+// deprecated
 function Contact(): React.ReactElement {
   const [randomColor] = useRandomColorPair();
 
