@@ -29,7 +29,7 @@ export default function Home({
         title={siteMetadata.title}
         description={siteMetadata.description}
       />
-      {/* <Banner frontMatter={author} /> */}
+      <Banner frontMatter={author} />
     </>
   );
 }
