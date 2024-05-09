@@ -25,10 +25,10 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO
+      {/* <PageSEO
         title={siteMetadata.title}
         description={siteMetadata.description}
-      />
+      /> */}
       <Banner frontMatter={author} />
     </>
   );
