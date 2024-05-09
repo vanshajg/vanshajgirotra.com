@@ -10,7 +10,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "prettier --write .",
     "prepare": "husky install",
-    "preview": "npm run build && npm run serve"
+    "preview": "bun run build && bun run serve"
   },
   "dependencies": {
     "@fontsource/fira-code": "4.5.9",
