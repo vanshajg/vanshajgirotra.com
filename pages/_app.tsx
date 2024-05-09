@@ -10,7 +10,8 @@ import '@fontsource/open-sans/500.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
 import '@fontsource/open-sans/800.css';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+import Analytics from '@/components/analytics/index';
 
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta content='width=device-width, initial-scale=1' name='viewport' />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
+      <VercelAnalytics />
       <Analytics />
       <LayoutWrapper>
         <Component {...pageProps} />
