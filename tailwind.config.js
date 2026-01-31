@@ -6,9 +6,7 @@ const colors = require('tailwindcss/colors');
 
 /** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
+
   content: [
     './pages/**/*.tsx',
     './components/**/*.tsx',
@@ -173,6 +171,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
+    // require('@tailwindcss/line-clamp'),
   ],
 };
