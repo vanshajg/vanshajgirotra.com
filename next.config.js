@@ -67,6 +67,22 @@ module.exports = withBundleAnalyzer({
       },
     ],
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'resume.vanshajgirotra.com',
+            },
+          ],
+          destination: '/resume.pdf',
+        },
+      ],
+    };
+  },
   async headers() {
     return [
       {
@@ -75,6 +91,7 @@ module.exports = withBundleAnalyzer({
       },
     ];
   },
+
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
