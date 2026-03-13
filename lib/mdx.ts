@@ -8,7 +8,7 @@ import { PostFrontMatter } from 'types/PostFrontMatter';
 import { Toc } from 'types/Toc';
 import getAllFilesRecursively from './utils/files';
 // Remark packages
-import remarkFootnotes from 'remark-footnotes';
+
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkCodeTitles from './remark-code-title';
@@ -88,7 +88,6 @@ export async function getFileBySlug<T>(
         [remarkTocHeadings, { exportRef: toc }],
         remarkGfm,
         remarkCodeTitles,
-        [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
         remarkImgToJsx,
       ];
