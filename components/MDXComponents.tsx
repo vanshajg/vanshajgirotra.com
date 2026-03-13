@@ -7,11 +7,23 @@ import TOCInline from './TOCInline';
 import Pre from './Pre';
 import { BlogNewsletterForm } from './NewsletterForm';
 
+import AuthorLayout from '../layouts/AuthorLayout';
+import ListLayout from '../layouts/ListLayout';
+import PostLayout from '../layouts/PostLayout';
+import PostSimple from '../layouts/PostSimple';
+
+const layouts: { [key: string]: React.ComponentType<any> } = {
+  AuthorLayout,
+  ListLayout,
+  PostLayout,
+  PostSimple,
+};
+
 const Wrapper: React.ComponentType<{ layout: string }> = ({
   layout,
   ...rest
 }) => {
-  const Layout = require(`../layouts/${layout}`).default;
+  const Layout = layouts[layout];
   return <Layout {...rest} />;
 };
 

@@ -41,14 +41,13 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
           </div>
 
           <div className='prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2'>
-            {children}
-            <div className='mt-8'>
-
-              <h2 className='mt-8 mb-4 text-2xl font-semibold dark:text-white'>
+            <div className='mb-8'>
+              <h2 className='mb-4 text-2xl font-semibold dark:text-white'>
                 Skills
               </h2>
               <StackList stack={WorkStack} />
             </div>
+            {children}
           </div>
         </div>
       </div>
