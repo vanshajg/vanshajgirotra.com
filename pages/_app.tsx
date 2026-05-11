@@ -3,7 +3,7 @@ import '@/css/prism.css';
 import '@/css/tailwind.css';
 import 'katex/dist/katex.css';
 
-import '@fontsource/fira-code';
+import '@fontsource/fira-code/index.css';
 import '@fontsource/open-sans/300.css';
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/500.css';

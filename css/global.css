@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .fade-in {
   animation: fade-in ease 500ms;
   animation-iteration-count: 1;
