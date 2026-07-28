@@ -18,7 +18,6 @@ export enum Stack {
   docker,
   kubernetes,
   helm,
-
 }
 
 export const WorkStack = [
@@ -78,6 +77,6 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
   },
   [Stack.springboot]: {
     value: 'SpringBoot',
-    color: Colors.springboot
-  }
+    color: Colors.springboot,
+  },
 };

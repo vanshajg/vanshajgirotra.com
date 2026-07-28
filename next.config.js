@@ -58,6 +58,9 @@ const securityHeaders = [
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  experimental: {
+    useTypeScriptCli: true,
+  },
 
   images: {
     remotePatterns: [
