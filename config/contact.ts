@@ -18,7 +18,7 @@ export const contact: Contact = {
   site: 'vanshajgirotra.com',
   links: {
     github: 'https://github.com/vanshajg',
-    linkedin: 'https://linkedin.com/in/vanshajgirotra',
+    linkedin: 'https://www.linkedin.com/in/vanshaj-girotra',
     twitter: 'https://twitter.com/vanshajgirotra',
     email: 'mailto:contact@vanshajgirotra.com',
     stackoverflow: 'https://stackoverflow.com/users/5830776/',
